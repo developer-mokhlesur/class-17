@@ -1,0 +1,415 @@
+/* Universal CSS Start */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Universal CSS End */
+/* Fixed-width CSS Start */
+.fixed-width{
+    width: 1200px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+/* Fixed-width CSS End */
+/* Image Max Width Start */
+img{
+    max-width: 100%;
+}
+/* Image Max Width End */
+body,h1,h2,h3,h4,h5,h6,p,span,ul,li,a{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none !important;
+}
+/* Clearfix CSS Start */
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/* Clearfix CSS End */
+/* Float Left CSS Start */
+.left{
+    float: left;
+}
+/* Float Left CSS End */
+/* Float Right CSS Start */
+.right{
+    float: right;
+}
+/* Float Right CSS End */
+/* Header CSS Start */
+header{
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+} 
+header .logo-left{
+    width: 30%;
+    text-align: start;
+}
+header .logo-left img {
+    width: 30%;
+    display: inline-block;
+    padding: 10px 0;
+}
+header .menu-right{
+    width: 70%;
+    text-align: end;
+} 
+header .menu-right ul{
+    list-style: none;
+    margin: 0;
+}
+header .menu-right ul li{
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+header .menu-right ul li a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 16px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 30px 0;
+    position: relative;
+}
+header .menu-right ul li a::before {
+    content: ""; 
+    position: absolute;
+    bottom: 26px;
+    right: 0;
+    height: 3px;
+    width: 0;
+    background: #fff;
+    transition: all 0.4s;
+}
+header .menu-right ul li a:hover::before{
+    width: 100% !important;
+   left: 0;
+}
+/* DropDown CSS Start */
+header .menu-right ul li ul {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 200px;
+    background-color: #000;
+    text-align: center;
+    padding: 0;
+    border-top: 5px solid #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s;
+}
+header .menu-right ul li ul li{
+    display: block;
+}
+header .menu-right ul li ul li a {
+    display: block;
+    padding: 15px 20px;
+    margin: 0;
+    text-align: start;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+header .menu-right ul li ul li a:hover{
+    background: #fff;
+    color: #000;
+}
+header .menu-right ul li ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 6% !important;
+    height: 3px;
+    width: 0%;
+    background: #000;
+    transition: all 0.2s ease-in-out;
+}
+header .menu-right ul li ul li a:hover::before{
+    width: 40% !important;
+}
+header .menu-right ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+}
+/* DropDown CSS End  */
+/* Header CSS End */
+/* Banner CSS Start */
+.banner {
+    background-image: url("https://i.ibb.co/N6BPyWQ/a0c6042d4612d7adf44692fffac7e082.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding: 200px 0;
+    position: relative;
+    z-index: 1;
+}
+.banner::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.105);
+    z-index: -1;
+}
+.banner h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 2%;
+}
+.banner p {
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 2%;
+}
+.banner button {
+    border: none;
+    padding: 13px 21px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 600;
+}
+.banner button.btn-1 {
+    color: #fff;
+    background: #000;
+    transition:all 0.4s;
+    border: 2px solid transparent;
+}
+.banner button.btn-1:hover{
+    background: #fff;
+    color: rgb(4, 4, 4);
+    border: 2px solid #000;
+}
+.banner button.btn-2 {
+    margin-left: 15px;
+    color: #000;
+    border: 2px solid transparent;
+    transition:all 0.4s;
+    background: #fff;
+}
+.banner button.btn-2:hover{
+    background: #000;
+    color: #fff;  
+}
+/* Banner CSS End */
+/* About CSS Start */
+.about{
+    padding: 2rem 0;
+    background: #87a471;
+    color: #fff;
+}
+.about h2 {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: 800;
+    position: relative;
+}
+.about h2::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 38%;
+    height: 3px;
+    width: 24%;
+    background: #fff;
+}
+.about .about-left{
+    width: 45%
+}
+.about .about-left p {
+    text-align: justify;
+    margin-top: 13%;
+}
+.about .about-right{
+    width: 45%;
+}
+.about .about-right img{
+    width: 55%;
+}
+/* About CSS End */
+/* Service CSS Start */
+.service{
+    background: #606a64;
+    color: #fff;
+    padding: 3rem 0 ;
+}
+.service h1 {
+    position: relative;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.service h1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    width: 20%;
+    height: 3px;
+    background: #fff;
+}
+.service h3 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.service p.service-p {
+    width: 65%;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+.service-item .service-box {
+    width: 32%;
+    margin-right: 2%;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: start;
+}
+.service-item .box-3{
+    margin-right: 0;
+}
+.service-item .service-box .s-icon {
+    float: left;
+    margin-right: 10px;
+    min-height: 121px;
+}
+.service-item .service-box img {
+    width: 80%;
+}
+.service-item .service-box h5 {
+    color: #000;
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.service-item .service-box p{
+    color: #606a64;
+}
+/* Service CSS End */
+/* Work CSS Start */
+.work{
+    background: #87a471;
+    padding: 5rem 0;
+}
+.work h3 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.work p.work-p{
+    padding-bottom: 2rem;
+}
+.work-img{
+    width: 45%;
+    border: 1px solid rgb(255, 255, 255);
+}
+.work-img img{
+    width: 100%;
+    padding-bottom: 2rem;
+}
+.work-img span{
+    color: #4C6686;
+    font-weight: 600;
+}
+.work-img p{
+    font-weight: 600;
+    padding-top: 1rem;
+}
+.work-item{
+    width: 23%;
+    margin-right: 2%;
+    padding-top: 3rem;
+}
+/* Work CSS End */
+/* Team CSS Start */
+.team{
+    background: #5b9776;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+.team h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 2rem;
+    position: relative;
+}
+.team h3::before {
+    content: "";
+    position: absolute;
+    bottom: 25px;
+    left: 38%;
+    background: rgb(255, 255, 255);
+    width: 24%;
+    height: 3px;
+}
+.team-img{
+    width: 33.33%;
+}
+.team-img ul{
+    list-style: none;
+}
+.team-img ul li{
+    display: inline-block;
+}
+.team-img ul li a {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 6px 5px;
+    transition: 0.3s;
+}
+.team-img ul li a:hover{
+    color: #acacace6;
+}
+/* Team CSS End */
+/* Contact CSS Start */
+.contact{
+    background: #606a64;
+    padding: 4rem 0;
+}
+.contact h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding-bottom: 2rem;
+}
+.contact p {
+    width: 56%;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+.contact button.btn-4 {
+    background: #00bc9c;
+    border: none;
+    padding: 13px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.4s ease-in-out;
+    border-radius: 4px;
+}
+.contact button.btn-4:hover{
+    background: #375264;
+}
+/* Contact CSS End */
+/* footer CSS Start */
+footer{
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+footer p{
+    margin: 0;
+    font-size: 1.2rem;
+    
+}
+/* footer CSS End */
